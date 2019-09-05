@@ -44,7 +44,7 @@ def sort_by_lastname(d):
     for full_name in d.keys():
     	temp = (full_name, full_name.split()[1])
     	name.append(temp)
-    sorted(name, key = lambda x:x[1])
+    name.sort(key = lambda x:x[1])
     for cont in name:
     	print(cont[0])
 
