@@ -49,6 +49,7 @@ def sort_by_lastname(d):
 
 
 
+
 def sort_by_lab_lastname(d):
     """Print TA names sorted by lab then last name."""
     pass
@@ -57,7 +58,6 @@ def sort_by_lab_lastname(d):
 def sort_by_year_program_lastname(d):
     """Print TA names sorted by year, then program, then last name."""
     pass
-
 
 def key_for_value(d, value):
     for k, v in d.iteritems():
@@ -74,6 +74,7 @@ def sort_by_vowel_count(d):
         vcd[key]=len(vowlist)
     for i in sorted(vcd.values()):
          print key_for_value(vcd, i)
+
 
 
 
