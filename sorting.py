@@ -44,7 +44,7 @@ def sort_by_lastname(d):
         first = name.split()[0]
         last = name.split()[1]
         names.append((last, first))
-    sorted_names = sorted(names)
+    sorted_names = sorted(names, key=lambda x: x[0])
     for name in names:
         key = name[1] + " " + name[0] #Because switched the order
         print(key + ": ", end='')
