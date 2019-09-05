@@ -45,13 +45,21 @@ def sort_by_lastname(d):
     	temp = (full_name, full_name.split()[1])
     	name.append(temp)
     name.sort(key = lambda x:x[1])
+    print("\nSORT BY LASTNAME:")
     for cont in name:
     	print(cont[0])
 
 
 def sort_by_lab_lastname(d):
     """Print TA names sorted by lab then last name."""
-    pass
+    TA = []
+    for full_name, info in d.items():
+    	temp = (full_name, info["lab"],full_name.split()[1])
+    	TA.append(temp)
+    TA.sort(key = lambda x:(x[1], x[2]))
+    print("\nSORT LAB AND LASTNAME:")
+    for cont in TA:
+    	print(cont[0])
 
 
 def sort_by_year_program_lastname(d):
