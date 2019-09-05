@@ -39,8 +39,15 @@ def sort_by_decreasing_year(d):
 # Functions to be completed #
 
 def sort_by_lastname(d):
-    """Print TA names sorted by last name."""
-    pass
+    ln = []
+    for key in d.keys():
+        first_name = key.split()[0]
+        last_name = key.split()[1]
+        ln.append((last_name,first_name))
+    for a,b in sorted(ln):
+        print b + ' ' + a
+
+
 
 
 def sort_by_lab_lastname(d):
@@ -52,10 +59,23 @@ def sort_by_year_program_lastname(d):
     """Print TA names sorted by year, then program, then last name."""
     pass
 
-
+def key_for_value(d, value):
+    for k, v in d.iteritems():
+        if v == value:
+            return k
 def sort_by_vowel_count(d):
-    """Print TA names sorted by number of vowels in name."""
-    pass
+    vowels=['a','e','i','o','u']
+    vcd = {}
+    for key in d.keys():
+        vowlist=[]
+        for i in key:
+            if i in vowels:
+                vowlist.append(i)
+        vcd[key]=len(vowlist)
+    for i in sorted(vcd.values()):
+         print key_for_value(vcd, i)
+
+
 
 
 # part 1: print TA names sorted by last name
