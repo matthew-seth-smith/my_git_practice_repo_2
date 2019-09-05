@@ -41,9 +41,14 @@ def sort_by_decreasing_year(d):
 def sort_by_lastname(d):
     names = [] #Initialize
     for name in d.keys():
+        first = name.split()[0]
         last = name.split()[1]
-        names.append(last)
-    print(sorted(names))
+        names.append((last, first))
+    sorted_names = sorted(names)
+    for name in names:
+        key = name[1] + " " + name[0] #Because switched the order
+        print(key + ": ", end='')
+        print(d[key])
 
 
 def sort_by_lab_lastname(d):
