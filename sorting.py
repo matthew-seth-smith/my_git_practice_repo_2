@@ -39,8 +39,11 @@ def sort_by_decreasing_year(d):
 # Functions to be completed #
 
 def sort_by_lastname(d):
-    """Print TA names sorted by last name."""
-    pass
+    names = [] #Initialize
+    for name in d.keys():
+        last = name.split()[1]
+        names.append(last)
+    print(sorted(names))
 
 
 def sort_by_lab_lastname(d):
